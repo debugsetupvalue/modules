@@ -12,7 +12,7 @@ function notify_module.getfunc()
     for i, v in pairs(getgc(true)) do
         if type(v) == "function" then
             local info = debug.getinfo(v)
-            if info and info.source and info.source:find("NotificationScript") and info.name == "LargeNotify" then
+            if info and info.source and info.source:find("NotificationScript") and info.name == "NormalNotify" then
                 notifunc = v
                 break
             end
